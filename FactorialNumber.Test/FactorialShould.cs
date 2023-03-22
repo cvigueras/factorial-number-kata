@@ -1,3 +1,4 @@
+using FactorialNumber.Console;
 using FluentAssertions;
 
 namespace FactorialNumber.Test
@@ -15,22 +16,6 @@ namespace FactorialNumber.Test
             var givenNumber = 0;
             var result = Factorial.GetResult(givenNumber);
             result.Should().Be(0);
-        }
-
-        [Test]
-        public void return_0_when_given_number_is_null()
-        {
-            var givenNumber = 0;
-            var result = Factorial.GetResult(givenNumber);
-            result.Should().Be(0);
-        }
-    }
-
-    public class Factorial
-    {
-        public static object GetResult(int givenNumber)
-        {
-            return 0;
         }
     }
 }
