@@ -1,2 +1,2 @@
 # FactorialNumber
-Calculate factorial by given number.
+Calculate factorial by given number in TDD.
