@@ -5,11 +5,6 @@ namespace FactorialNumber.Test
 {
     public class FactorialShould
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
         public void return_0_when_given_number_is_0()
         {
@@ -24,6 +19,14 @@ namespace FactorialNumber.Test
             var givenNumber = -7;
             var result = Factorial.GetResult(givenNumber);
             result.Should().Be(0);
+        }
+
+        [Test]
+        public void return_factorial_when_given_number()
+        {
+            var givenNumber = 5;
+            var result = Factorial.GetResult(givenNumber);
+            result.Should().Be(120);
         }
     }
 }

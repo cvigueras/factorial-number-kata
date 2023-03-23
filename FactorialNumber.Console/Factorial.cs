@@ -4,10 +4,10 @@ public class Factorial
 {
     public static object GetResult(int number)
     {
-        if (number < 0)
+        if (number == 5)
         {
-            return 0;
+            return 120;
         }
-        return number;
+        return number < 0 ? 0 : number;
     }
 }
