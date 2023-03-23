@@ -28,5 +28,13 @@ namespace FactorialNumber.Test
             var result = Factorial.GetResult(givenNumber);
             result.Should().Be(120);
         }
+
+        [Test]
+        public void return_factorial_when_other_given_number()
+        {
+            var givenNumber = 8;
+            var result = Factorial.GetResult(givenNumber);
+            result.Should().Be(40320);
+        }
     }
 }
