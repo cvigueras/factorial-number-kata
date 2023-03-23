@@ -36,5 +36,13 @@ namespace FactorialNumber.Test
             var result = Factorial.GetResult(givenNumber);
             result.Should().Be(40320);
         }
+
+        [Test]
+        public void return_factorial_when_other_more_given_number()
+        {
+            var givenNumber = 10;
+            var result = Factorial.GetResult(givenNumber);
+            result.Should().Be(3628800);
+        }
     }
 }

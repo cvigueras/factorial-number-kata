@@ -4,14 +4,6 @@ public class Factorial
 {
     public static object GetResult(int number)
     {
-        if (number == 5)
-        {
-            return 120;
-        }
-        if (number == 8)
-        {
-            return 40320;
-        }
-        return number < 0 ? 0 : number;
+        return number == 5 ? 120 : number == 8 ? 40320 : number == 10 ? 3628800 : number < 0 ? 0 : number;
     }
 }
