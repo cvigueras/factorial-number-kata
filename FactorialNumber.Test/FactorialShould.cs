@@ -25,7 +25,12 @@ namespace FactorialNumber.Test
             result.Should().Be(0);
         }
 
+        [TestCase(1,1)]
+        [TestCase(2,2)]
+        [TestCase(3,6)]
+        [TestCase(4,24)]
         [TestCase(5,120)]
+        [TestCase(6,720)]
         [TestCase(8,40320)]
         [TestCase(10,3628800)]
         public void return_factorial_when_given_number(int input, long expectedResult)

@@ -9,6 +9,7 @@ public class Factorial
             return 0;
         }
 
-        return FactorialNumber.Create(factorialNumber.Value).GetFactorial();
+        var number = FactorialNumber.Create(factorialNumber.Value);
+        return number.GetFactorial();
     }
 }
