@@ -9,7 +9,9 @@ namespace FactorialNumber.Test
         public void return_0_when_given_number_is_0()
         {
             var givenNumber = 0;
+
             var result = Factorial.GetResult(givenNumber);
+
             result.Should().Be(0);
         }
 
@@ -17,32 +19,20 @@ namespace FactorialNumber.Test
         public void return_0_when_given_number_is_negative()
         {
             var givenNumber = -7;
+
             var result = Factorial.GetResult(givenNumber);
+
             result.Should().Be(0);
         }
 
-        [Test]
-        public void return_factorial_when_given_number()
+        [TestCase(5,120)]
+        [TestCase(8,40320)]
+        [TestCase(10,3628800)]
+        public void return_factorial_when_given_number(int input, long expectedResult)
         {
-            var givenNumber = 5;
-            var result = Factorial.GetResult(givenNumber);
-            result.Should().Be(120);
-        }
+            var result = Factorial.GetResult(input);
 
-        [Test]
-        public void return_factorial_when_other_given_number()
-        {
-            var givenNumber = 8;
-            var result = Factorial.GetResult(givenNumber);
-            result.Should().Be(40320);
-        }
-
-        [Test]
-        public void return_factorial_when_other_more_given_number()
-        {
-            var givenNumber = 10;
-            var result = Factorial.GetResult(givenNumber);
-            result.Should().Be(3628800);
+            result.Should().Be(expectedResult);
         }
     }
 }
