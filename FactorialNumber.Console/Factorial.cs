@@ -2,26 +2,13 @@ namespace FactorialNumber.Console;
 
 public class Factorial
 {
-    public static long GetResult(int number)
+    public static long GetResult(FactorialNumber factorialNumber)
     {
-        if (number <= 0)
+        if (factorialNumber.Value <= 0)
         {
             return 0;
         }
 
-        return GetFactorial(number);
-    }
-
-    private static long GetFactorial(int number)
-    {
-        var total = 1;
-        var previousNumber = number;
-        for (var i = number; i > 0; i--)
-        {
-            total *= previousNumber;
-            previousNumber--;
-        }
-
-        return total;
+        return FactorialNumber.Create(factorialNumber.Value).GetFactorial();
     }
 }
